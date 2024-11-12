@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Cruds</title>
+</head>
+<body>
+    <div class="w-75 m-auto">
+        <div class="form-floating mb-3">
+    <input type="text" oninput="validateInputs(this)" class="form-control " id="Prouduct_Name" placeholder="Prouduct Name">
+            <div class="alert alert-danger p-1 m-2 d-none  ">
+                <p >Enter the First letter Capitalize........ </p>
+            </div>
+                    <label for="Prouduct_Name">Prouduct Name</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="number" oninput="validateInputs(this)" class="form-control" id="Prouduct_Price" placeholder="Prouduct Price">
+            <div class="alert alert-danger p-1 m-2 d-none">
+                <p >Enter Numebers only equal three number ........ </p>
+            </div>
+            <label for="Prouduct_Price">Prouduct Price</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" oninput="validateInputs(this)" list="choice" class="form-control" id="Prouduct_Catugary" placeholder="Prouduct Catugary">
+            <div class="alert alert-danger p-1 m-2 d-none">
+                <p >Enter the first letter Capitalize ...... </p>
+            </div>
+            <label for="Prouduct_Catugary" >Prouduct Catugary</label>
+        </div>
+        <datalist id="choice">
+            <option value="Camera"></option>
+            <option value="I-phone"></option>
+            <option value="Samsung"></option>
+            <option value="T-shirt"></option>
+            <option value="Lenovo"></option>
+        </datalist>
+        <div class="form-floating">
+            <textarea oninput="validateInputs(this)" class="form-control" placeholder="Prouduct Description" id="Prouduct_Description"></textarea>
+            <div class="alert alert-danger p-1 m-2 d-none">
+                <p >Enter Four Letters........ </p>
+            </div>
+            <label for="Prouduct Description">Prouduct Description</label>
+        </div>
+        <div class="form-floating">
+            <input oninput="validateInputs(this)" type="file" class="form-control" id="Prouduct_Image" placeholder="Prouduct Image">
+            <div class="alert alert-danger p-1 m-2 d-none">
+                <!-- <p >thicumentdt........ </p> -->
+            </div>
+            <label for="Prouduct_Image">Prouduct Image</label>
+        </div>
+        <button id="addProduct" oninput="validateInputs(this)" onclick="addProduct()" class="btn btn-primary my-3" > Add Prouduct</button>
+        <button  id="updateProduct" onclick="updateProduct() " class="btn btn-outline-warning d-none my-3" > update Prouduct</button>
+    </div>
+    
+    <!-- display product -->
+    <div class="container">
+        <input id="searchInput" oninput=" searchInput()" class="form-control" type="search" placeholder="search on any product">
+        <div class="row " id="displayhere">
+            <div  class="col-md-3   p-2 rounded-4">
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+</body>
+</html>
